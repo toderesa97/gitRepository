@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /**
  * Created by test on 28/05/2017.
  */
@@ -10,6 +12,12 @@ public class Main {
 
         String toBePrint = String.format("%d+%d=%d", a, b, a+b);
         System.out.println(toBePrint);
+        ArrayList<String> strings = new ArrayList<>();
+        strings.add("select * from cars");
+        strings.add("select plate_licence from cars where like '47%'");
+        Query query = new Query(strings, String::compareTo);
+
+        System.out.println(query);
     }
 
 }
