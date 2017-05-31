@@ -1,5 +1,12 @@
 # Practising with git
 
+## What is git?
+
+Git is a helpful tool to keep track of our files in a project. Instead of copying files to test if a 
+new feature is going to work, we can branch, and that means creating our 'developing' 
+path, so we don't push to the master branch without being sure what we've done. It's supposed that the master branch
+contains the last version (and obviously it must work) of our software.
+
 This is a repository which will be used to practice the git methodology. I'll be using IntelliJ and their VCS (Version control System)
 
 ##### TODO
