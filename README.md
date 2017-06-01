@@ -9,7 +9,7 @@ path, so we don't push to the master branch without being sure what we've done. 
 contains the last version (and obviously it must work) of our software.
 
 This is a repository which will be used to practice the git methodology. I'll be using IntelliJ and the VCS (Version control Software),
-mostly known as GIT.
+mostly known as GIT. Also I'll be using GitBash (provides a BASH emulation used to run Git from the command line)
 
 ##### Commands
 
