@@ -106,3 +106,5 @@ hs_err_pid*
 
 Note: ``*.extension`` is a regular expression that matches **all files regardless their names** with extension ``.extension``.
 
+
+By @toderesa97
