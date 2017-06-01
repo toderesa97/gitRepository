@@ -63,6 +63,16 @@ Now to push, execute:
 ```
 git branch      # See the actual branches
 git branch <n>  # Creates a branch with name n from the actual branch where the command is executed (creates a copy)
+```
+When working with branches the way we push a project to the repository is ``$ git push origin <branch_name>``. Obviously what is
+being pushed to a branch will not appear in another unless you merge. For example, imagine you are requested to add
+a new functionality in the software, first thing you should do is to create your branch (your 'develop path')  in order to avoid adding modifications to the
+master branch without testing that the functionality and what is in the master branch are not acting up. If everything is perfect you can execute
+``$ git merge --no-ff <branch>`` which merges ``branch`` into the actual branch where the command is being executed.
+
+To select among different branches you can execute ``$ git checkout <branch>``
+
+```
 git clone <url> # Clones a repository from _url_ into the directory where is being executed (grab from server the repository and *paste* it into your computer)
 ```
 
