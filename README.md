@@ -23,14 +23,19 @@ as follows...
 
 ``$ git log > log_file.txt``
 
-If this command is run on OS based on UNIX you should enter to VIM terminal text editor. To exit type 
+If this command is run on OS based on UNIX you should enter to VIM (VI IMproved) terminal text editor. To exit type 
 ``:q``  or  ``:wq`` if you entered on VI.
 
 Continuing with the commands...
 
 ```
-git add <files> # Adding files to be committed
-git commit      # Commit the added files
+git add <files>           # Adding files to be committed
+git commit <file(s)>      # Commit the added files
+```
+You will be redirected to VI editor in order to add a message of the selected file(s). That's a good practice 
+because it allows you to add specific information depending of the file. If you want to commit everything just type
+``$ git commit -am "committing everything with this message"``
+```
 git push        # Push to the repository
 ```
 
