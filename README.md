@@ -16,12 +16,27 @@ mostly known as GIT.
 
 ```
 git status      # Retrieve the current status (if a file has been modified, or nothing to commit...)
-git log         # Retrieve the transactions we've done
+git log -n      # Retrieve the last n transactions(commits) we've done. Argument n is not necessary you can just
+type git log.
+```
+Be careful with this last command. If you have done lots of 'transactions' and you execute this command
+in the terminal (especially on GitBash - for Windows), it's going to be a mess. Instead redirect the output to a file using the redirection operator,
+as follows...
+
+``$ git log > log_file.txt``
+
+If this command is run on OS based on UNIX you should enter to VIM terminal text editor. To exit type 
+``:q``  or  ``:wq`` if you entered on VI.
+
+Continuing with the commands...
+
+```
 git add <files> # Adding files to be committed
 git commit      # Commit the added files
 git push        # Push to the repository     
 git branch      # See the actual branches
 git branch <n>  # Branch with name n from the actual branch where the command is executed (creates a copy)
+git clone <url> # Clones a repository from _url_ into the directory where is being executed
 ```
 
 Also it's very helpful to add a file called ``.gitignore``. This file contains all the extensions we don't want
