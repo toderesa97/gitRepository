@@ -28,7 +28,7 @@ as follows...
 
 ``$ git log > log_file.txt``
 
-If this command is run on OS based on UNIX you should enter to VIM (VI IMproved) terminal text editor. To exit type 
+If this command is run in an OS based on UNIX you should enter to VIM (VI IMproved) terminal text editor. To exit type 
 ``:q``  or  ``:wq`` if you entered on VI.
 
 Continuing with the commands...
