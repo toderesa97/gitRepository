@@ -1,4 +1,5 @@
 # Practising with git
+### *by* @toderesa97
 
 ## What is git?
 
