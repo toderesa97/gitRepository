@@ -13,8 +13,8 @@ mostly known as GIT.
 ##### Commands
 
 ```
-git status      # Retrieve the current status (if a file has been modified, or nothing to commit...)
-git log -n      # Retrieve the last n transactions(commits) we've done. Argument n is not necessary you can just
+$ git status      # Retrieve the current status (if a file has been modified, or nothing to commit...)
+$ git log -n      # Retrieve the last n transactions(commits) we've done. Argument n is not necessary you can just
 type git log.
 ```
 Be careful with this last command. If you have done lots of 'transactions' and you execute this command
@@ -29,17 +29,17 @@ If this command is run on OS based on UNIX you should enter to VIM (VI IMproved)
 Continuing with the commands...
 
 ```
-git add <files>           # Adding files to be committed
-git commit <file(s)>      # Commit the added files
+$ git add <files>           # Adding files to be committed
+$ git commit <file(s)>      # Commit the added files, $ git commit -m "message" , to commit the added file(s) with a message.
 ```
 You will be redirected to VI editor in order to add a message of the selected file(s). That's a good practice 
 because it allows you to add specific information depending of the file. If you want to commit everything just type
 ``$ git commit -am "committing everything with this message"``
 ```
-git push        # Push to the repository
+$ git push        # Push to the repository
 ```
 
-If you executed the last command you will get an error because your computer does not know who you are. In order
+If you executed the last command you would get an error because your computer does not know who you are. In order
 to push (send to your remote repository) there are an useful command.
 
 ``$ git remote -v``, and the output should be something similar to:
@@ -51,6 +51,18 @@ origin  https://github.com/toderesa97/gitRepository.git (push)
 ```
 The important thing here is the first column, which represents the name of your remote. 
 
+If you don't have any remote, you must create a repository and execute the following 
+
+ ```
+ $ echo "# <repo_name>" >> README.md    # concatenates the message surrounded by double quotes into 
+                                        a new file that is going to be created implicitly (Expendable)
+ $ git init                             # initializes a git repository in the actual path
+ $ git add README.md                    # must be added if it was created to commit it.
+ $ git commit -m "first commit messg"
+ $ git remote add <remote_name> <reposory_url>.git
+ $ git push -u origin master
+ ```
+
 Another important thing we must take into account is the branches. You can execute ``$ git branch``
 to see your branches (if it's a new repository you'll have just the **master** branch lead by an asterisk)
 
@@ -61,16 +73,22 @@ Now to push, execute:
 ``$ git push <remote> <branch>`` in our case ``$ git push origin master``. You will be asked for your github credentials. 
 
 ```
-git branch      # See the actual branches
-git branch <n>  # Creates a branch with name n from the actual branch where the command is executed (creates a copy)
+$ git branch      # See the actual branches
+$ git branch <n>  # Creates a branch with name n from the actual branch where the command is executed (creates a copy)
 ```
 When working with branches the way we push a project to the repository is ``$ git push origin <branch_name>``. Obviously what is
 being pushed to a branch will not appear in another unless you merge. For example, imagine you are requested to add
 a new functionality in the software, first thing you should do is to create your branch (your 'develop path')  in order to avoid adding modifications to the
-master branch without testing that the functionality and what is in the master branch are not acting up. If everything is perfect you can execute
-``$ git merge --no-ff <branch>`` which merges ``branch`` into the actual branch where the command is being executed.
+master branch without testing that the functionality and what is in the master branch are not acting up. If everything is perfect you can execute:
 
-To select among different branches you can execute ``$ git checkout <branch>``
+```
+$ git branch                    # see actual branches
+$ git checkout master           # To select among different branches
+$ git pull origin master
+$ git merge  <branch>  
+$ git push origin master
+```
+
 
 ```
 git clone <url> # Clones a repository from _url_ into the directory where is being executed (grab from server the repository and *paste* it into your computer)
