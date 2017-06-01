@@ -91,7 +91,8 @@ $ git push origin master
 
 
 ```
-git clone <url> # Clones a repository from _url_ into the directory where is being executed (grab from server the repository and *paste* it into your computer)
+$ git clone <url>               # Clones a repository from _url_ into the directory where is being executed (grab from server the repository and *paste* it into your computer)
+$ git pull origin <branch>      # 'Updates' your workspace with the content in the repository. 
 ```
 
 Also it's very helpful to add a file called ``.gitignore``. This file contains all the extensions we don't want
