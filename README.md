@@ -10,9 +10,7 @@ contains the last version (and obviously it must work) of our software.
 This is a repository which will be used to practice the git methodology. I'll be using IntelliJ and the VCS (Version control Software),
 mostly known as GIT.
 
-##### TODO
-
-1.Practise with basic commands such as...
+##### Commands
 
 ```
 git status      # Retrieve the current status (if a file has been modified, or nothing to commit...)
@@ -33,10 +31,34 @@ Continuing with the commands...
 ```
 git add <files> # Adding files to be committed
 git commit      # Commit the added files
-git push        # Push to the repository     
+git push        # Push to the repository
+```
+
+If you executed the last command you will get an error because your computer does not know who you are. In order
+to push (send to your remote repository) there are an useful command.
+
+``$ git remote -v``, and the output should be something similar to:
+
+```
+origin  https://github.com/toderesa97/gitRepository.git (fetch)
+
+origin  https://github.com/toderesa97/gitRepository.git (push)
+```
+The important thing here is the first column, which represents the name of your remote. 
+
+Another important thing we must take into account is the branches. You can execute ``$ git branch``
+to see your branches (if it's a new repository you'll have just the **master** branch lead by an asterisk)
+
+Note: asterisk (*) indicates you in what branch are you working on.
+
+Now to push, execute:
+
+``$ git push <remote> <branch>`` in our case ``$ git push origin master``. You will be asked for your github credentials. 
+
+```
 git branch      # See the actual branches
-git branch <n>  # Branch with name n from the actual branch where the command is executed (creates a copy)
-git clone <url> # Clones a repository from _url_ into the directory where is being executed
+git branch <n>  # Creates a branch with name n from the actual branch where the command is executed (creates a copy)
+git clone <url> # Clones a repository from _url_ into the directory where is being executed (grab from server the repository and *paste* it into your computer)
 ```
 
 Also it's very helpful to add a file called ``.gitignore``. This file contains all the extensions we don't want
