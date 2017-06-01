@@ -1,6 +1,10 @@
 # Practising with git
 ### *by* @toderesa97
 
+Before starting ...
+
+![github2](https://cloud.githubusercontent.com/assets/19231158/26694534/02e1b056-4708-11e7-8376-aacc2b6ad1b0.png)
+
 ## What is git?
 
 Git is a helpful tool to keep track of our files in a project. Instead of copying files to test if a 
